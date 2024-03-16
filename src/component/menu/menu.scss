@@ -1,0 +1,105 @@
+@import '../../style/varaibles.scss';
+
+
+.menu--container {
+    max-width: 100vw;
+    max-height: 100vh;
+
+    .menu--subcontainer11 {
+        display: flex;
+        background: rgb(255, 255, 255);
+        padding: 0 $large;
+        // padding-left: 180px;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        font-size: $medium;
+        margin-left: 160px;
+
+
+        p {
+            font-family: $fontNormal;
+            font-weight: 700;
+            font-size: $medium;
+            cursor: pointer;
+            transition: color .3s ease-in;
+            opacity: .8;
+
+
+            &:hover {
+                color: #005AE0;
+                transition: color .3s ease-in;
+            }
+        }
+    }
+
+    .menu--subcontainer12 {
+        border-top: solid 1px #F2F5F8;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: fit-content;
+        background: rgb(255, 255, 255);
+        height: calc(100vh - 100px);
+
+        div {
+            display: flex;
+            align-items: center;
+            margin-left: 16px;
+            cursor: pointer;
+            justify-content: start;
+            transition: transform .3s ease-in;
+
+
+
+            &:hover {
+                transform: translateX(10px);
+                transition: transform .3s ease-in;
+            }
+
+            p {
+                margin-left: 16px;
+                margin-right: 16px;
+                font-family: $fontNormal;
+                font-size: $small;
+                font-weight: 500;
+                opacity: .8;
+            }
+        }
+    }
+
+    .menu--subcontainer13 {
+        display: none;
+    }
+}
+
+
+@media(max-width: 850px) {
+    .menu--container {
+
+        .menu--subcontainer11 {
+            padding: $medium $small;
+            border-bottom: solid 2px rgb(238, 238, 238);
+            font-size: 24px;
+            margin-left: 0;
+
+            p {
+                font-size: 24px;
+                line-height: 44px;
+            }
+        }
+
+        .menu--subcontainer12 {
+            display: none;
+        }
+    }
+}
+
+
+// @media (max-width: 500px) {
+//     .menu--container {
+
+//         .menu--subcontainer12 {}
+
+//     }
+// }
