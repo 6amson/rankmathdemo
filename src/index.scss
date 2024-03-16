@@ -2,6 +2,7 @@
 
 .App {
     position: relative;
+    overflow: hidden;
 }
 
 .menu--subcontainer13 {
@@ -9,17 +10,18 @@
 }
 
 .body--container {
+
     position: absolute;
-    top: 0;
-    // background: red;
-    width: calc(100vw - 160px);
+    top: -25px;
+    width: calc(100vw - 130px);
     margin-top: 100px;
-    left: 160px;
+    left: 130px;
     padding: 100px $large;
-    height: max-content;
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
 
     .body--subcontainer1 {
-        background: white;
+        background: rgb(255, 255, 255);
         border-radius: 8px;
         padding: $tiny;
 
@@ -106,6 +108,24 @@
         font-family: $fontNormal;
         font-size: $tiny;
         padding: 0 $tiny;
+        overflow: hidden;
+        height: 0;
+        transition: height .4s ease-in;
+        // padding: 4px 8px;
+
+
+        p{
+            cursor: pointer;
+            transition: color .4s ease-in, background .4s ease-out;
+
+            &:hover{
+                color: white;
+                background: #AEB8C4;
+                padding: 4px 8px;
+                border-radius: 16px;
+                transition: color .4s ease-in, background .4s ease-out;
+            }
+        }
     }
 
     .body--subcontainer3 {
@@ -144,7 +164,11 @@
     .body--subcontainer4 {
         display: flex;
         justify-content: space-around;
+        align-items: center;
         margin-top: $medium;
+        overflow: hidden;
+        height: 0;
+        transition: height .4s ease-in;
 
 
         .body--subcontainer41 {
@@ -195,5 +219,176 @@
         position: fixed;
         width: 100vw;
         box-shadow: 2px 2px 12px rgb(189, 189, 189);
+        z-index: 2;
     }
+
+    .body--container {
+        position:relative;
+        // top: -50px;
+        width: calc(100vw);
+        margin-top: 0;
+        left: 0;
+        padding: 32px 16px;
+        height: calc(100vh - 100px);
+        overflow-y: scroll;
+        z-index: 1;
+    
+        .body--subcontainer1 {
+            background: rgb(255, 255, 255);
+            border-radius: 8px;
+            padding: $tiny;
+    
+            .body--subcontainer11 {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: $medium;
+    
+                p:last-child {
+                    font-family: $fontNormal;
+                    opacity: .6;
+                }
+            }
+    
+            .body--subcontainer11--div1 {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+    
+                .body--subcontainer11--div11 {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    font-family: $fontNormal;
+                    font-weight: 500;
+                    color: rgb(28, 28, 28);
+    
+                    p {
+                        font-size: 24px;
+                    }
+                }
+            }
+    
+            .body--subcontainer12 {
+                margin-bottom: $tiny;
+    
+                .body--subcontainer12--texta {
+                    font-family: $fontNormal;
+                    font-weight: 700;
+                    font-size: $medium;
+                    line-height: 30px;
+                    color: #4C5968;
+                    margin-bottom: 8px;
+                }
+    
+                div {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+    
+                    p {
+                        font-family: $fontNormal;
+                    }
+    
+                    p:first-child {
+                        font-size: $small;
+                        color: grey;
+                        opacity: .6;
+                    }
+    
+                    p:last-child {
+                        font-size: $tiny;
+                        color: white;
+                        background: #EE225D;
+                        padding: 4px 6px;
+                        border-radius: 16px;
+                    }
+                }
+            }
+        }
+    
+        .body--subcontainer2 {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            overflow: hidden;
+            color: #4C5968;
+            margin: 8px 0;
+            font-family: $fontNormal;
+            font-size: $tiny;
+            padding: 0 $tiny;
+            overflow: hidden;
+            height: 0;
+            transition: height .4s ease-in;
+            // padding: 4px 8px;
+    
+    
+            p{
+                cursor: pointer;
+                transition: color .4s ease-in, background .4s ease-out;
+    
+                &:hover{
+                    color: white;
+                    background: #AEB8C4;
+                    padding: 4px 8px;
+                    border-radius: 16px;
+                    transition: color .4s ease-in, background .4s ease-out;
+                }
+            }
+        }
+    
+        .body--subcontainer3 {
+            background: white;
+            border-radius: 8px;
+            padding: $tiny;
+    
+    
+            .body--subcontainer31 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+                font-family: $fontNormal;
+    
+                .body--subcontainer31a {
+                    display: flex;
+                    align-items: center;
+    
+                    div:first-child {
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        margin-right: 8px;
+                    }
+    
+                    p {
+                        font-size: $tiny;
+                        color: grey;
+                        opacity: .6;
+                    }
+                }
+            }
+        }
+    
+        .body--subcontainer4 {
+            justify-content: space-between;
+    
+        }
+    }
+    
+    .bitcoin--div {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-right: 8px; 
+    }
+    
+    
 }
